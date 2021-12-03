@@ -9,6 +9,7 @@ fn main() {
 
     match day {
         1 => puzzles::day1::run(part).unwrap(),
+        2 => puzzles::day2::run(part).unwrap(),
         _ => panic!("day {} not done", day)
     };
 
