@@ -78,7 +78,7 @@ fn score(board: &Board) -> Option<u32> {
     let col_win = (0..board[0].len())
         .map(|i| board.iter().all(|row| row[i].marked))
         .any(|x| x);
-    match (row_win || col_win) {
+    match row_win || col_win {
         false => None,
         true => Some(unmarked_sum(board))
     }

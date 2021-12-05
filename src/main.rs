@@ -12,6 +12,7 @@ fn main() {
         2 => puzzles::day2::run(part).unwrap(),
         3 => puzzles::day3::run(part).unwrap(),
         4 => puzzles::day4::run(part).unwrap(),
+        5 => puzzles::day5::run(part).unwrap(),
         _ => panic!("day {} not done", day)
     };
 
