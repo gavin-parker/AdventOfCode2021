@@ -54,8 +54,8 @@ fn flash(pos: (usize, usize ), grid: &mut Grid, dim: (usize, usize)) {
 }
 
 fn simulate(steps: usize, target: usize, mut grid: Grid) -> usize {
-    println!("Steps left: {}", steps);
-    show(&grid);
+    // println!("Steps left: {}", steps);
+    // show(&grid);
     let width = grid[0].len();
     let height = grid.len();
     for row in 0..height {

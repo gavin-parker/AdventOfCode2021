@@ -1,11 +1,13 @@
 pub mod puzzles;
 use std::env;
+use std::time::{Duration, Instant};
 
 fn main() {
 
     let args: Vec<String> = env::args().collect();
     let day = args[1].parse::<usize>().unwrap();
     let part = args[2].parse::<usize>().unwrap();
+    let now = Instant::now();
 
     match day {
         1 => puzzles::day1::run(part).unwrap(),
@@ -21,5 +23,6 @@ fn main() {
         11 => puzzles::day11::run(part).unwrap(),
         _ => panic!("day {} not done", day)
     };
+    println!("took: {}ms", now.elapsed().as_millis());
 
 }

@@ -1,7 +1,7 @@
 use std::fs::File;
 use std::io::{self, BufRead};
 use std::collections::HashMap;
-use std::num;
+use lazy_static::lazy_static;
 
 fn read_file(file: &File) -> Vec<i32> {
     let line = io::BufReader::new(file).lines().map(|x| x.unwrap()).next().unwrap();
@@ -14,7 +14,7 @@ fn cost_p1(crab_pos: i32, crab_dest: i32) -> i32 {
 
 fn cost_p2(crab_pos: i32, crab_dest: i32) -> i32 {
     let diff = (crab_pos - crab_dest).abs();
-    (0..=diff).sum()
+    diff + (diff+1) / 2
 }
 
 fn find_cheapest_pos(crabs: Vec<i32>, cost: fn(i32, i32) -> i32) -> i32 {
