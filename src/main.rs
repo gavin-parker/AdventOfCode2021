@@ -21,6 +21,7 @@ fn main() {
         9 => puzzles::day9::run(part).unwrap(),
         10 => puzzles::day10::run(part).unwrap(),
         11 => puzzles::day11::run(part).unwrap(),
+        12 => puzzles::day12::run(part).unwrap(),
         _ => panic!("day {} not done", day)
     };
     println!("took: {}ms", now.elapsed().as_millis());
